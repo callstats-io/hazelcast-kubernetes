@@ -1,13 +1,17 @@
 FROM quay.io/pires/docker-jre:8u131_alpine3.6.2
-label maintainer Paulo Pires <pjpires@gmail.com>
 
-ENV VERSION 3.8.3
+LABEL version="v3.8.3-test"
+
+ENV RELEASE_TAG v3.8.3-test
+ENV ARTIFACT hazelcast-kubernetes-bootstrapper-3.8.3-SNAPSHOT.jar
 
 RUN \
   apk add --update curl ca-certificates; apk upgrade; \
-  curl -Lskj https://github.com/pires/hazelcast-kubernetes-bootstrapper/releases/download/$VERSION/hazelcast-kubernetes-bootstrapper-$VERSION.jar \
-  -o /bootstrapper.jar;\
+  curl -Lskj https://github.com/callstats-io/hazelcast-kubernetes-bootstrapper/releases/download/$RELEASE_TAG/$ARTIFACT \
+  -o /bootstrapper.jar; \
   apk del curl wget; \
   rm /var/cache/apk/*
+
+EXPOSE 5701 8080
 
 CMD java -jar /bootstrapper.jar
