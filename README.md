@@ -8,7 +8,7 @@ Hazelcast clustering for Kubernetes made easy. It includes a lean (100MB) Hazelc
 ## Software
 
 * JRE 8u151
-* Hazelcast 3.9.4
+* Hazelcast 3.8.8
 
 ## Pre-requisites
 
@@ -96,7 +96,7 @@ spec:
     spec:
       containers:
       - name: hazelcast
-        image: callstats/hazelcast-kubernetes:v3.9.4
+        image: callstats/hazelcast-kubernetes:v3.8.8
         imagePullPolicy: Always
         env:
         - name: "DNS_DOMAIN"
@@ -205,7 +205,7 @@ Members [1] {
 
 Members [2] {
 	Member [10.244.89.3]:5701 - 02c0dd8c-2398-4d0a-88a6-3710bb0fbf14 this
-	Member [10.244.42.2]:5701 - 8d4956d7-028f-4ef1-8475-b3.9.4355bbf
+	Member [10.244.42.2]:5701 - 8d4956d7-028f-4ef1-8475-b3a866355bbf
 }
 ```
 
@@ -220,7 +220,7 @@ Examine the status again by checking a node's logs and you should see the 4 memb
 
 Members [4] {
 	Member [10.244.89.3]:5701 - 02c0dd8c-2398-4d0a-88a6-3710bb0fbf14 this
-	Member [10.244.42.2]:5701 - 8d4956d7-028f-4ef1-8475-b3.9.4355bbf
+	Member [10.244.42.2]:5701 - 8d4956d7-028f-4ef1-8475-b3a866355bbf
 	Member [10.244.89.4]:5701 - 86cd410b-7b6d-4ce3-a757-7d10b263f1cb
 	Member [10.244.42.3]:5701 - 469c8e76-f1e1-468f-9632-f50d4d690237
 }
