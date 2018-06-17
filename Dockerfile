@@ -1,9 +1,9 @@
 FROM openjdk:8u151-jdk-alpine3.7
 
-LABEL version="v3.8.6"
+LABEL version="v3.9.4"
 
-ENV RELEASE_TAG v3.8.6
-ENV ARTIFACT hazelcast-kubernetes-bootstrapper-3.8.6.jar
+ENV RELEASE_TAG v3.9.4
+ENV ARTIFACT hazelcast-kubernetes-bootstrapper-3.9.4.jar
 
 # pulls the hazelcast with bootstrapper jar file
 RUN \
