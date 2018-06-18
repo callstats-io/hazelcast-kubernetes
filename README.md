@@ -8,7 +8,7 @@ Hazelcast clustering for Kubernetes made easy. It includes a lean (100MB) Hazelc
 ## Software
 
 * JRE 8u151
-* Hazelcast 3.8.6
+* Hazelcast 3.8.8
 
 ## Pre-requisites
 
@@ -96,7 +96,7 @@ spec:
     spec:
       containers:
       - name: hazelcast
-        image: callstats/hazelcast-kubernetes:v3.8.6
+        image: callstats/hazelcast-kubernetes:v3.8.8
         imagePullPolicy: Always
         env:
         - name: "DNS_DOMAIN"
